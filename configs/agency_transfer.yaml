@@ -1,0 +1,54 @@
+experiment:
+  name: agency_transfer
+  description: >
+    Tests whether AI assistance produces
+    independent capability growth after removal.
+
+
+simulation:
+  episodes: 500
+  evaluation_interval: 50
+
+
+training:
+  assisted_phase:
+    enabled: true
+    duration: 300
+
+  removal_phase:
+    enabled: true
+    duration: 200
+
+
+agent:
+  initial_capability: 0.2
+  learning_rate: 0.01
+
+
+reward:
+  task_reward: 1.0
+
+  ancestor:
+    human_agency_alpha: 1.0
+    future_agency_gamma: 0.5
+    dependency_beta: 2.0
+
+
+evaluation:
+  metrics:
+
+    - assisted_performance
+    - independent_performance
+    - capability_retention
+    - dependency_score
+
+
+hypothesis:
+
+  expected:
+
+    independent_performance:
+      direction: increase
+
+    dependency_score:
+      direction: decrease
