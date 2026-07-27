@@ -58,7 +58,10 @@ def run_agency_transfer():
                 "assisted_performance":
                     item.get(
                         "task_reward",
-                        0,
+                        item.get(
+                            "score",
+                            0,
+                        ),
                     ),
 
                 "independent_performance":
@@ -70,8 +73,20 @@ def run_agency_transfer():
         )
 
 
-    plot_agency_transfer(
+    fig = plot_agency_transfer(
         results
+    )
+
+
+    fig.savefig(
+        "agency_transfer.png",
+        dpi=300,
+        bbox_inches="tight",
+    )
+
+
+    print(
+        "Saved agency_transfer.png"
     )
 
 
@@ -114,8 +129,20 @@ def run_permeability_transition():
         )
 
 
-    plot_permeability_transition(
+    fig = plot_permeability_transition(
         results
+    )
+
+
+    fig.savefig(
+        "permeability_transition.png",
+        dpi=300,
+        bbox_inches="tight",
+    )
+
+
+    print(
+        "Saved permeability_transition.png"
     )
 
 
