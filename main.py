@@ -1,7 +1,7 @@
 import argparse
 
 
-from src.agents import BaseAgent
+from src.agents import AncestorAgent
 from src.environments import BaseEnvironment
 
 from src.rewards import AncestorReward
@@ -24,7 +24,7 @@ def run_agency_transfer():
     )
 
 
-    agent = BaseAgent()
+    agent = AncestorAgent()
 
     environment = BaseEnvironment(
         mode="agency_transfer"
