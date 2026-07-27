@@ -1,4 +1,5 @@
 from .base_environment import BaseEnvironment
+from .transfer_task_env import TransferTaskEnv
 from .changing_rules_env import ChangingRulesEnvironment
 from .transfer_task_env import TransferTaskEnvironment
 from .ecosystem_env import EcosystemEnvironment
