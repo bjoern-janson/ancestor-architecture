@@ -2,18 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class BaseAgent(ABC):
-    """
-    Abstract agent architecture.
-
-    All agents receive:
-        - task
-        - environment feedback
-        - interaction history
-
-    and produce:
-        - response/action
-        - internal update
-    """
 
     def __init__(self):
         self.history = []
@@ -24,15 +12,18 @@ class BaseAgent(ABC):
         pass
 
     def observe_feedback(self, feedback):
-        """
-        Process environmental consequences.
-        """
         self.history.append(feedback)
 
+    def update(self, feedback=None):
+        """
+        Update internal model based on feedback.
+        """
+
+        self.observe_feedback(feedback)
+
+        self.update_model()
+
     def update_model(self):
-        """
-        Optional self-revision mechanism.
-        """
         pass
 
     def record_performance(self, score):
