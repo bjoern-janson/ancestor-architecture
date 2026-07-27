@@ -1,0 +1,55 @@
+experiment:
+  name: permeability_phase_transition
+
+
+simulation:
+
+  kappa_range:
+
+    min: 0.0
+    max: 2.0
+    step: 0.05
+
+
+  trials: 100
+
+
+model:
+
+  initial_permeability: 0.1
+
+
+transition:
+
+  parameter:
+    name: constraint_consequence_coupling
+
+    symbol: kappa
+
+
+metrics:
+
+  measure:
+
+    - update_velocity
+    - revision_rate
+    - stability
+    - adaptation_success
+
+
+hypothesis:
+
+  expected:
+
+    low_kappa:
+      state: unstable
+
+    high_kappa:
+      state: adaptive
+
+
+output:
+
+  save:
+    - phase_curve
+    - transition_point
