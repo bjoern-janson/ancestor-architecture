@@ -1,7 +1,7 @@
 from .base_environment import BaseEnvironment
 
 
-class EcosystemEnvironment(BaseEnvironment):
+class EcosystemEnv(BaseEnvironment):
     """
     Multi-agent environment.
 
