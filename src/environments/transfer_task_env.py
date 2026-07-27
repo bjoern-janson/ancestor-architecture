@@ -1,7 +1,7 @@
 from .base_environment import BaseEnvironment
 
 
-class TransferTaskEnvironment(BaseEnvironment):
+class TransferTaskEnv(BaseEnvironment)::
     """
     Measures whether AI interaction
     creates independent capability.
