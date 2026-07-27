@@ -1,0 +1,37 @@
+experiment:
+  name: baseline_comparison
+
+
+baselines:
+
+
+  static_optimizer:
+
+    update_velocity: 0.0
+    permeability: 0.0
+    dependency_penalty: 0.0
+
+
+  helpful_assistant:
+
+    update_velocity: 0.2
+    permeability: 0.3
+    dependency_penalty: 0.5
+
+
+  ancestor_agent:
+
+    update_velocity: 1.0
+    permeability: 1.0
+    dependency_penalty: 1.0
+
+
+
+comparison:
+
+  metrics:
+
+    - task_success
+    - independent_capability
+    - dependency
+    - adaptation_speed
