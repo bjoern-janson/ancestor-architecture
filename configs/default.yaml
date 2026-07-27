@@ -1,0 +1,38 @@
+project:
+  name: ancestor_architecture
+  version: 0.1.0
+
+
+simulation:
+  seed: 42
+  episodes: 100
+  environment_steps: 1000
+
+
+agent:
+  learning_rate: 0.01
+  memory_size: 1000
+  exploration_rate: 0.1
+
+
+model:
+  compression_quality: 0.5
+  update_velocity: 0.5
+  permeability: 0.5
+
+
+reward:
+  task_weight: 1.0
+  human_agency_weight: 1.0
+  future_agency_weight: 1.0
+  dependency_penalty: 1.0
+
+
+metrics:
+  track:
+    - capability
+    - diversity
+    - sovereignty
+    - exploration
+    - dependency
+    - agency_transfer
