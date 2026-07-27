@@ -1,7 +1,7 @@
 from .base_environment import BaseEnvironment
 
 
-class ChangingRulesEnvironment(BaseEnvironment):
+class ChangingRulesEnv(BaseEnvironment):
     """
     Tests permeability.
 
